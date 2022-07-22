@@ -10,16 +10,23 @@
 </head>
 <body>
   <header>
-    Lista de Tarefas
+    To-Do-List
   </header>
 
   <form>
-    <input type="text" class="to-do-input" >
-    <button class="to-do-button">
+    <input type="text" class="to-do-input"/>
+    <button type="submit" class="to-do-button">
       <i class="fa-solid fa-square-plus"></i>
     </button>
-  </form>
 
+    <div class="select">
+      <select name="to-dos" class="filter-to-do">
+        <option value="all">Todas</option>
+        <option value="completed">Completas</option>
+        <option value="uncompleted">Incompletas</option>
+      </select>
+    </div>
+  </form> 
   <div class="to-do-container">
     <ul class="to-do-list">
     </ul>

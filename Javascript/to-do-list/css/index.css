@@ -73,7 +73,16 @@ form button:hover {
   font-size: 1rem;
 }
 
+.fa-trash, .fa-check {
+  pointer-events: none;
+}
+
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
+}
+
+.deleted {
+  transform: translate(30rem) ;
+  opacity: 0;
 }

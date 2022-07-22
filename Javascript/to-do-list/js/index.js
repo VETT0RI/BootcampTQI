@@ -39,14 +39,16 @@ function addToDo(event) {
 
 function deleteAndCheck(event) {
   const item = event.target
+  const toDo = item.parentElement
   
   if(item.classList[0] === 'trash-btn') {
-    const toDo = item.parentElement
-    toDo.remove()
+    toDo.classList.add('deleted')
+    toDo.addEventListener('transitionend', () => {
+      toDo.remove()
+    })
   } 
 
   if(item.classList[0] === 'completed-btn') {
-    const toDo = item.parentElement
     toDo.classList.toggle('completed')
   }
 
